@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Login Form</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <i class="fa-brands fa-steam"></i>
+            <h2>steam</h2>
+        </div>
+        <div class="content">
+            <div class="form">
+                <label for="name">sign in with account name</label>
+                <input name="name" type="text">
+                <label for="password">password</label>
+                <input name="password" type="password">
+                <input type="checkbox" checked><span>Remember me</span>
+                <button>Sign in</button>
+            </div>
+            <div class="qr-code">
+                <label for="qr">or sign in with qr</label>
+                <img src="assets/qr.png" alt="">
+                <p>Use the <a href="#">steam mobile app</a> to sign in via QR code</p>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#" class="help">help, i can't sign in</a>
+            <div class="new-account">
+                <p>Don't have a Steam account? </p> <a href="#">create a free account</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

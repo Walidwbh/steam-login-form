@@ -1,0 +1,132 @@
+:root {
+    --background-color: #171a21;
+    --main-color: #66c0f4;
+    --second-color: #1b2838;
+    --gray-color: #c7d5e0;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    height: 100vh;
+    background-image: url(/assets/rust.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* begin global components */
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+label.active {
+    color: var(--main-color);
+}
+a {
+    color: var(--gray-color);
+    text-transform: capitalize;
+    font-size: 14px;
+}
+p {
+    font-size: 14px;
+    display: inline-block;
+}
+/* end global components */
+.container {
+    width: 50%;
+    /* height: 50%; */
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gray-color);
+    border: 1px solid black;
+    border-left: 1px solid var(--main-color);
+    padding: 40px;
+    position: relative;
+}
+.container::before {
+    content: "\58";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.container .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container .title i {
+    font-size: 45px;
+}
+.container .title h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+.container h2::after{
+    content: "\00AE";
+    position: absolute;
+    font-size: 10px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.content .form {
+    flex: 60%;
+}
+
+.content .form input:not(:last-of-type) {
+    width: 100%;
+    background-color: var(--second-color);
+    border: none;
+    outline: none;
+    height: 30px;
+    padding: 10px;
+    caret-color: var(--gray-color);
+    color: var(--gray-color);
+    margin-bottom: 20px;
+}
+.content .form input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+    accent-color: var(--second-color);
+    /* background-color: var(--second-color) !important; */
+}
+.content .form button {
+    display: block;
+    border: none;
+    margin: 10px auto;
+    padding: 14px;
+    width: 250px;
+    font-size: 18px;
+    background: rgb(127,177,255);
+    background: linear-gradient(90deg, rgba(127,177,255,1) 0%, rgba(17,17,136,1) 100%, rgba(0,11,68,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    cursor: pointer;
+}
+.content .qr-code {
+    flex: 30%;
+    text-align: center;
+}
+.content .qr-code img {
+    width: 200px;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .help {}
+.footer .new-account {}
